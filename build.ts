@@ -1,6 +1,7 @@
 import { FormatterArguments } from 'style-dictionary/types/Format';
 import { config } from './config';
 import StyleDictionaryBase, { TransformedToken } from 'style-dictionary';
+import * as fs from 'fs';
 
 const StyleDictionary = StyleDictionaryBase.extend(config);
 const fileHeader = StyleDictionary.formatHelpers.fileHeader;
@@ -11,7 +12,15 @@ console.log('\n==============================================');
 StyleDictionary.registerFormat({
   formatter: ({ file, dictionary, options }: FormatterArguments) => {
     const symbols = dictionary.allProperties.map(cssTemplate).join('') + '\n';
-    return fileHeader({ file }) + `${options.selector ?? ':root'} {\n${symbols}\n}\n`;
+
+    const composedVars = fs
+      .readFileSync('./composed-variables/composed-variables.css', 'utf-8')
+      .match(/:root \{\n([\S\s]*)}/m)![1];
+
+    return (
+      fileHeader({ file }) +
+      `${options.selector ?? ':root'} {\n${symbols}\n\n  /* Composed variables */\n\n${composedVars}\n}\n`
+    );
   },
   name: 'css/variables',
 });
@@ -35,7 +44,7 @@ StyleDictionary.registerFormat({
     const { allTokens } = dictionary;
 
     allTokens.forEach((token) => {
-      // if a token uses a refernce token, we add the original token object
+      // if a token uses a reference token, we add the original token object
       const usesReference = dictionary.usesReference(token);
 
       if (usesReference) {

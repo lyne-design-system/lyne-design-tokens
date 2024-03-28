@@ -1,0 +1,164 @@
+:root {
+  --sbb-font-default-color: var(--sbb-color-charcoal);
+
+  /* Focus outline */
+  --sbb-focus-outline-color-default: var(--sbb-color-black);
+  --sbb-focus-outline-color-dark: var(--sbb-color-white);
+  --sbb-focus-outline-color: var(--sbb-focus-outline-color-default);
+  --sbb-focus-outline-width: var(--sbb-border-width-1x);
+
+  /* Title */
+  --sbb-font-size-title-1: var(--sbb-typo-scale-2-5x);
+  --sbb-font-size-title-2: var(--sbb-typo-scale-2x);
+  --sbb-font-size-title-3: var(--sbb-typo-scale-1-5x);
+  --sbb-font-size-title-4: var(--sbb-typo-scale-1-25x);
+  --sbb-font-size-title-5: var(--sbb-typo-scale-1-125x);
+  --sbb-font-size-title-6: var(--sbb-typo-scale-0-875x);
+  --sbb-font-size-text-xl: var(--sbb-typo-scale-1-25x);
+  --sbb-font-size-text-l: var(--sbb-typo-scale-1-125x);
+  --sbb-font-size-text-m: var(--sbb-typo-scale-default);
+  --sbb-font-size-text-s: var(--sbb-typo-scale-0-875x);
+  --sbb-font-size-text-xs: var(--sbb-typo-scale-0-75x);
+  --sbb-font-size-text-xxs: var(--sbb-typo-scale-0-75x);
+
+  /* Spacing */
+  --sbb-spacing-responsive-xxxs: var(--sbb-spacing-responsive-xxxs-zero);
+  --sbb-spacing-responsive-xxs: var(--sbb-spacing-responsive-xxs-zero);
+  --sbb-spacing-responsive-xs: var(--sbb-spacing-responsive-xs-zero);
+  --sbb-spacing-responsive-s: var(--sbb-spacing-responsive-s-zero);
+  --sbb-spacing-responsive-m: var(--sbb-spacing-responsive-m-zero);
+  --sbb-spacing-responsive-l: var(--sbb-spacing-responsive-l-zero);
+  --sbb-spacing-responsive-xl: var(--sbb-spacing-responsive-xl-zero);
+  --sbb-spacing-responsive-xxl: var(--sbb-spacing-responsive-xxl-zero);
+
+  /* Layout */
+  --sbb-layout-base-offset-responsive: var(--sbb-layout-base-offset-responsive-zero);
+  --sbb-grid-base-columns: var(--sbb-layout-base-grid-columns-zero);
+  --sbb-grid-base-gutter-responsive: var(--sbb-layout-base-grid-gutter-responsive-zero);
+
+  /* Button */
+  --sbb-size-button-m-min-height: var(--sbb-size-button-m-min-height-zero);
+  --sbb-size-button-l-min-height: var(--sbb-size-button-l-min-height-zero);
+
+  /* Form */
+  --sbb-size-form-element-m-min-height: var(--sbb-size-form-element-m-min-height-zero);
+  --sbb-size-form-element-l-min-height: var(--sbb-size-form-element-l-min-height-zero);
+
+  @media (forced-colors: active) {
+    /* Focus outline */
+    --sbb-focus-outline-color-default: Highlight;
+    --sbb-focus-outline-color-dark: Highlight;
+    --sbb-focus-outline-width: var(--sbb-border-width-2x);
+  }
+
+  /* Micro */
+  @media (min-width: 22.5rem) {
+    /* Layout */
+    --sbb-layout-base-offset-responsive: var(--sbb-layout-base-offset-responsive-micro);
+    --sbb-grid-base-columns: var(--sbb-layout-base-grid-columns-micro);
+    --sbb-grid-base-gutter-responsive: var(--sbb-layout-base-grid-gutter-responsive-micro);
+  }
+
+  /* Small */
+  @media (min-width: 37.5rem) {
+    /* Title */
+    --sbb-font-size-title-1: var(--sbb-typo-scale-3x);
+
+    /* Spacing */
+    --sbb-spacing-responsive-l: var(--sbb-spacing-responsive-l-small);
+    --sbb-spacing-responsive-xl: var(--sbb-spacing-responsive-xl-small);
+    --sbb-spacing-responsive-xxl: var(--sbb-spacing-responsive-xxl-small);
+
+    /* Layout */
+    --sbb-layout-base-offset-responsive: var(--sbb-layout-base-offset-responsive-small);
+    --sbb-grid-base-columns: var(--sbb-layout-base-grid-columns-small);
+    --sbb-grid-base-gutter-responsive: var(--sbb-layout-base-grid-gutter-responsive-small);
+  }
+
+  /* Medium */
+  @media (min-width: 52.5rem) {
+    /* Title */
+    --sbb-font-size-title-2: var(--sbb-typo-scale-2-5x);
+    --sbb-font-size-title-3: var(--sbb-typo-scale-2x);
+    --sbb-font-size-title-4: var(--sbb-typo-scale-1-5x);
+    --sbb-font-size-title-5: var(--sbb-typo-scale-1-25x);
+    --sbb-font-size-title-6: var(--sbb-typo-scale-default);
+    --sbb-font-size-text-xl: var(--sbb-typo-scale-1-5x);
+    --sbb-font-size-text-l: var(--sbb-typo-scale-1-25x);
+    --sbb-font-size-text-m: var(--sbb-typo-scale-1-125x);
+    --sbb-font-size-text-s: var(--sbb-typo-scale-default);
+    --sbb-font-size-text-xs: var(--sbb-typo-scale-0-875x);
+
+    /* Spacing */
+    --sbb-spacing-responsive-xxxs: var(--sbb-spacing-responsive-xxxs-medium);
+    --sbb-spacing-responsive-xxs: var(--sbb-spacing-responsive-xxs-medium);
+    --sbb-spacing-responsive-xs: var(--sbb-spacing-responsive-xs-medium);
+    --sbb-spacing-responsive-s: var(--sbb-spacing-responsive-s-medium);
+    --sbb-spacing-responsive-m: var(--sbb-spacing-responsive-m-medium);
+    --sbb-spacing-responsive-l: var(--sbb-spacing-responsive-l-medium);
+    --sbb-spacing-responsive-xl: var(--sbb-spacing-responsive-xl-medium);
+    --sbb-spacing-responsive-xxl: var(--sbb-spacing-responsive-xxl-medium);
+
+    /* Layout */
+    --sbb-layout-base-offset-responsive: var(--sbb-layout-base-offset-responsive-medium);
+    --sbb-grid-base-columns: var(--sbb-layout-base-grid-columns-medium);
+    --sbb-grid-base-gutter-responsive: var(--sbb-layout-base-grid-gutter-responsive-medium);
+
+    /* Button */
+    --sbb-size-button-m-min-height: var(--sbb-size-button-m-min-height-medium);
+    --sbb-size-button-l-min-height: var(--sbb-size-button-l-min-height-medium);
+
+    /* Form */
+    --sbb-size-form-element-m-min-height: var(--sbb-size-form-element-m-min-height-medium);
+    --sbb-size-form-element-l-min-height: var(--sbb-size-form-element-l-min-height-medium);
+
+    /* Header */
+    --sbb-header-height: var(--sbb-spacing-fixed-24x);
+
+    /* Time Input */
+    --sbb-time-input-max-width: #{functions.px-to-rem-build(65)};
+  }
+
+  /* Large */
+  @media (min-width: 64rem) {
+    /* Title */
+    --sbb-font-size-title-1: var(--sbb-typo-scale-3-5x);
+
+    /* Spacing */
+    --sbb-spacing-responsive-l: var(--sbb-spacing-responsive-l-large);
+    --sbb-spacing-responsive-xl: var(--sbb-spacing-responsive-xl-large);
+    --sbb-spacing-responsive-xxl: var(--sbb-spacing-responsive-xxl-large);
+
+    /* Layout */
+    --sbb-layout-base-offset-responsive: var(--sbb-layout-base-offset-responsive-large);
+    --sbb-grid-base-columns: var(--sbb-layout-base-grid-columns-large);
+    --sbb-grid-base-gutter-responsive: var(--sbb-layout-base-grid-gutter-responsive-large);
+  }
+
+  /* Wide */
+  @media (min-width: 80rem) {
+    /* Spacing */
+    --sbb-spacing-responsive-m: var(--sbb-spacing-responsive-m-wide);
+
+    /* Layout */
+    --sbb-layout-base-offset-responsive: var(--sbb-layout-base-offset-responsive-wide);
+    --sbb-grid-base-columns: var(--sbb-layout-base-grid-columns-wide);
+    --sbb-grid-base-gutter-responsive: var(--sbb-layout-base-grid-gutter-responsive-wide);
+  }
+
+  /* Ultra */
+  @media (min-width: 90rem) {
+    /* Title */
+    --sbb-font-size-title-1: var(--sbb-typo-scale-4x);
+
+    /* Spacing */
+    --sbb-spacing-responsive-l: var(--sbb-spacing-responsive-l-ultra);
+    --sbb-spacing-responsive-xl: var(--sbb-spacing-responsive-xl-ultra);
+    --sbb-spacing-responsive-xxl: var(--sbb-spacing-responsive-xxl-ultra);
+
+    /* Layout */
+    --sbb-layout-base-offset-responsive: var(--sbb-layout-base-offset-responsive-ultra);
+    --sbb-grid-base-columns: var(--sbb-layout-base-grid-columns-ultra);
+    --sbb-grid-base-gutter-responsive: var(--sbb-layout-base-grid-gutter-responsive-ultra);
+  }
+}
