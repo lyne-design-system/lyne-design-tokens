@@ -9,7 +9,7 @@ const attributes = (): Partial<DesignToken> => ({
   },
 });
 
-export const typo: DesignTokens = {
+export const typo = {
   fontFamily: {
     value: '"SBB", "Helvetica Neue", Helvetica, Arial, sans-serif',
   },
@@ -79,4 +79,4 @@ export const typo: DesignTokens = {
       ...attributes(),
     },
   },
-};
+} satisfies DesignTokens;

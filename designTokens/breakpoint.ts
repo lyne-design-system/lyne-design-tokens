@@ -6,7 +6,7 @@ const attributes = (): Partial<DesignToken> => ({
   },
 });
 
-export const breakpoint: DesignTokens = {
+export const breakpoint = {
   zero: {
     min: {
       value: 0,
@@ -77,4 +77,4 @@ export const breakpoint: DesignTokens = {
       ...attributes(),
     },
   },
-};
+} satisfies DesignTokens;

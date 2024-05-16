@@ -1,6 +1,7 @@
 import { FormatterArguments } from 'style-dictionary/types/Format';
 import { config } from './config';
 import StyleDictionaryBase, { TransformedToken } from 'style-dictionary';
+import { createTailwindSdFormatter } from './tailwind/createTailwindConfig';
 import * as fs from 'fs';
 
 const StyleDictionary = StyleDictionaryBase.extend(config);
@@ -8,6 +9,8 @@ const fileHeader = StyleDictionary.formatHelpers.fileHeader;
 
 console.log('Build started...');
 console.log('\n==============================================');
+
+StyleDictionary.registerFormat(createTailwindSdFormatter());
 
 StyleDictionary.registerFormat({
   formatter: ({ file, dictionary, options }: FormatterArguments) => {
